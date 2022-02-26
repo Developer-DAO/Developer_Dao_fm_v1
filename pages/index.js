@@ -108,7 +108,7 @@ export default function Home() {
               <div className="info_menu_text">
                 <ul>
                   <li className="info_menu_links_holder">
-                    <a href="https://www.developerdao.com/" target="_blank">
+                    <a href="https://www.developerdao.com/" rel="noreferrer" target="_blank">
                       <span className="info_menu_links">Website</span>
                       <span className="info_menu_links">
                         <Image src={black_arrow} alt="black arrow Icon"/>
@@ -116,7 +116,7 @@ export default function Home() {
                     </a>
                   </li>
                   <li className="info_menu_links_holder">
-                    <a href="https://developerdao.notion.site/developerdao/Developer-DAO-Wiki-eff4dcb00bef46fbaa93e9e4cf940e2e" target="_blank">
+                    <a href="https://developerdao.notion.site/developerdao/Developer-DAO-Wiki-eff4dcb00bef46fbaa93e9e4cf940e2e" rel="noreferrer" target="_blank">
                       <span className="info_menu_links">Wiki</span>
                       <span className="info_menu_links">
                       <Image src={black_arrow} alt="black arrow Icon"/>
@@ -124,7 +124,7 @@ export default function Home() {
                     </a>
                   </li>
                   <li className="info_menu_links_holder">
-                    <a href="https://twitter.com/developer_dao" target="_blank">
+                    <a href="https://twitter.com/developer_dao" rel="noreferrer" target="_blank">
                       <span className="info_menu_links">Twitter</span>
                       <span className="info_menu_links">
                       <Image src={black_arrow} alt="black arrow Icon"/>
@@ -135,7 +135,7 @@ export default function Home() {
               </div>
             </span>
              <li className="icons" title="tweet">
-              <a href="https://twitter.com/intent/tweet?text=Chilling with 🎧 Lofi Music on Developer DAO FM https://developerdaofm.com/" target="_blank">
+              <a href="https://twitter.com/intent/tweet?text=Chilling with 🎧 Lofi Music on Developer DAO FM https://developerdaofm.com/" rel="noreferrer" target="_blank">
                   <Image src={TwitterIcon} alt="twitter Icon"/>
               </a>
              </li>

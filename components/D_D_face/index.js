@@ -1,7 +1,7 @@
-import {React, useState, useEffect, useRef} from "react"
+import {React, useState, useEffect} from "react"
 import anime from 'animejs';
 
-export default function face({isTheMuic_playing_or_not, anim_el}) {
+export default function Face({isTheMuic_playing_or_not, anim_el}) {
   let shapes =  {
     musicNotPlaying: "M240.351 252.51C236.562 247.423 225.478 237.343 211.457 237.713C197.436 238.083 188.878 247.732 186.351 252.51",
     muiscPlaying: "M186.351 237.703C190.14 242.79 201.224 252.87 215.245 252.5C229.266 252.13 237.824 242.481 240.351 237.703"
