@@ -10,8 +10,9 @@ const Footer = ({musicState}) =>{
             <div className="flex-container">
           <div className="links_left flex-item">
             <div className="links_icon" title="Developer DAO website">
+              <a rel="noreferrer" target="_blank" href="https://www.developerdao.com/">
               <Image src={Links} alt="Links Icon"/>
-            
+              </a>
             </div>
           </div>
            <div className="links_right flex-item">
