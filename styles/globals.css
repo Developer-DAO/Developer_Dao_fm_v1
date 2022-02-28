@@ -598,30 +598,9 @@ footer .links li:first-child{
   }
 
   
-@media screen and (max-width: 320px) {
-    body{
-      overflow: hidden;
-    }
-  .Home_container__bCOhY {
-    padding: 0 1rem !important;
-} 
-.logo {
-  width: 113px;
-}
-.anmation {
-  width: 100%;
 
-}
-.face_background {
-  top: 124px;
-}
-#face_svg {
-  max-width: 162px;
-  top: 79px;
-}
-}
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   body{
     overflow: hidden;
   }
@@ -637,9 +616,37 @@ width: 100%;
 }
 .face_background {
 top: 111px;
+  animation:none
+
+}
+#face_svg {
+  max-width: 189px;
+  top: 98px;
+}
+}
+
+@media screen and (max-width: 320px) {
+  body{
+    overflow: hidden;
+  }
+.Home_container__bCOhY {
+  padding: 0 1rem !important;
+} 
+.logo {
+width: 113px;
+}
+.anmation {
+width: 100%;
+
+}
+.face_background {
+top: 124px;
 }
 #face_svg {
 max-width: 162px;
-top: 107px;
+top: 98px;
+}
+.face_background{
+animation:none
 }
 }
