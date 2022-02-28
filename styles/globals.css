@@ -644,7 +644,7 @@ top: 124px;
 visibility: hidden;
 }
 #face_svg {
-max-width: 162px;
+  max-width: 235px;
 top: 98px;
 }
 .face_background{
