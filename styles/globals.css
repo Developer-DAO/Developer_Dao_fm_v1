@@ -581,7 +581,6 @@ footer .links li:first-child{
 
 
 
-
  /* scroll */
 
   body::-webkit-scrollbar {
@@ -598,16 +597,11 @@ footer .links li:first-child{
     border: 3px solid rgb(0, 0, 0);  /* creates padding around scroll thumb */
   }
 
-  @media screen and (max-width: 320px) {
+  
+@media screen and (max-width: 320px) {
     body{
       overflow: hidden;
     }
-    /* .anmation {
-      width: 100%;
-      margin: 0 auto;
-      height: 89vh;
-      padding-top: 38px;
-  }*/
   .Home_container__bCOhY {
     padding: 0 1rem !important;
 } 
@@ -623,7 +617,29 @@ footer .links li:first-child{
 }
 #face_svg {
   max-width: 162px;
-  top: 107px;
+  top: 79px;
 }
-  
+}
+
+@media screen and (max-width: 425px) {
+  body{
+    overflow: hidden;
   }
+.Home_container__bCOhY {
+  padding: 0 1rem !important;
+} 
+.logo {
+width: 113px;
+}
+.anmation {
+width: 100%;
+
+}
+.face_background {
+top: 111px;
+}
+#face_svg {
+max-width: 162px;
+top: 107px;
+}
+}
