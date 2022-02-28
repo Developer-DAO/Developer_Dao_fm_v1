@@ -376,7 +376,7 @@ a {
   background-color: #fff;
   top: 50%;
   left: 44%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
 }
 .button .button_span{
   display: block;
