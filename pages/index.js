@@ -1,6 +1,5 @@
 
 import {React, useState, useRef} from "react"
-import { gsap } from "gsap";
 import Image from 'next/image'
 import ReactPlayer from 'react-player/youtube'
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
@@ -8,7 +7,6 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import styles from '../styles/Home.module.css'
 // img
 import {
-  Background,
   PlayIcon,
   PauseIcon,
   InfoIcon,
@@ -24,10 +22,12 @@ import {
 import PageHead from "../components/PageHead/index.js"
 import Footer from "../components/footer/index.js"
 import Face from "../components/D_D_face/index.js"
-
+import Info_menu from "../components/Info_menu"
+import Timer from "../components/timer"
 export default function Home() {
   const screenMood = useFullScreenHandle();
-  const [info, setInfo] = useState("false")
+  const [info, setInfo] = useState("false");
+  const [timer, setTimerMode] = useState("false")
   const [state, setTheState] = useState( {
     url: null,
     pip: false,
@@ -46,6 +46,9 @@ export default function Home() {
   
   const showInfo = () => {
     setInfo(!info)
+  }
+  const showTimer = () => {
+    setTimerMode(!timer)
   }
   const boxRef = useRef();
   
@@ -101,39 +104,11 @@ export default function Home() {
            <li className="icons infoIcon" title="Info" onClick={ () => showInfo()}>
                 <Image src={InfoIcon}alt="info Icon"/>
             </li>
-            <span className={info ? "info_menu" :"info_menu_mode" }>
-              <div className="info_menu_logo">
-              <Image src={black_logo} alt="full Screen Icon"/>
-              </div>
-              <div className="info_menu_text">
-                <ul>
-                  <li className="info_menu_links_holder">
-                    <a href="https://www.developerdao.com/" rel="noreferrer" target="_blank">
-                      <span className="info_menu_links">Website</span>
-                      <span className="info_menu_links">
-                        <Image src={black_arrow} alt="black arrow Icon"/>
-                      </span>
-                    </a>
-                  </li>
-                  <li className="info_menu_links_holder">
-                    <a href="https://developerdao.notion.site/developerdao/Developer-DAO-Wiki-eff4dcb00bef46fbaa93e9e4cf940e2e" rel="noreferrer" target="_blank">
-                      <span className="info_menu_links">Wiki</span>
-                      <span className="info_menu_links">
-                      <Image src={black_arrow} alt="black arrow Icon"/>
-                      </span>
-                    </a>
-                  </li>
-                  <li className="info_menu_links_holder">
-                    <a href="https://twitter.com/developer_dao" rel="noreferrer" target="_blank">
-                      <span className="info_menu_links">Twitter</span>
-                      <span className="info_menu_links">
-                      <Image src={black_arrow} alt="black arrow Icon"/>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </span>
+            <Info_menu info={info}/>
+            <li className="icons time_icon" title="time Icon"  onClick={ () => showTimer()}>
+                  <Image src={time} alt="time Icon"/>
+             </li>
+             <Timer timer={timer}/>
              <li className="icons" title="tweet">
               <a href="https://twitter.com/intent/tweet?text=Chilling with 🎧 Lofi Music on Developer DAO FM https://developerdaofm.com/" rel="noreferrer" target="_blank">
                   <Image src={TwitterIcon} alt="twitter Icon"/>

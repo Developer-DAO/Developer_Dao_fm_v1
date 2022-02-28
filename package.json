@@ -9,15 +9,16 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "gsap": "^3.9.1",
     "next": "^12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-full-screen": "^1.1.0",
-    "react-player": "^2.9.0"
+    "react-player": "^2.9.0",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "8.7.0",
-    "eslint-config-next": "12.0.8"
+    "eslint-config-next": "12.0.8",
+    "file-loader": "^6.2.0"
   }
 }

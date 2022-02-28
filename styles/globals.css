@@ -109,42 +109,61 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.info_menu_mode{
-  background-image: url("../img/dddddddddddd.png");
-  background-size: cover;
+
+.menu{
+  background: #faf1ef;
   display: inline-block;
-  width: 223px;
-  height: 214px;
-  background-color: #fff;
-  position: absolute;
-  top: 40px;
-  right: 9px;
-  border-radius:9px;
-  padding: 16px 20px;
   font-family: RobotoMono;
- opacity: 1;
- visibility :visible;
- transition: all 0.2s ease-in-out;
- 
-}
-.info_menu{
-  background-image: url("../img/dddddddddddd.png");
-  background-size: cover;
-  display: inline-block;
-  width: 223px;
-  height: 214px;
-  background-color: #fff;
   position: absolute;
   top: 60px;
-  right: 9px;
   border-radius:9px;
-  padding: 16px 20px;
-  font-family: RobotoMono;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.menu:hover{
+  cursor: auto;
+}
+.info_menu{
   opacity: 0;
-  visibility : hidden;
-  transition: all 0.33s ease-in-out;
+  width: 223px;
+  height: 214px;
+  right: 9px;
+}
+.time_menu{
+  opacity: 0;
+  width: 243px;
+  height: 276px;
+  right: 52px;
+}
+.hide{
+  opacity: 0;
+  visibility :hidden;
+}
+.show{
+  top: 35px;
+  opacity: 1;
+  visibility :visible;
 }
 
+.background_img{
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2 !important;
+  filter: blur(30px) saturate(250%);
+  pointer-events: none;
+  opacity: 0.7;
+  animation: background_ani ease-in-out infinite;
+  animation-duration: 13s
+}
+.inner_menu{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    padding: 18px 19px;
+}
 .headIcons .info_menu_links_holder{
   float: none;
   padding: 0;
@@ -172,8 +191,111 @@ a {
 .info_menu_text .info_menu_links_holder:nth-child(3){
   border-bottom:none
 }
+.time_circle .cirle{
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 20px);
+}
+.time_num{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 63px);
+  color: #000;
+  font-size: 1.4rem;
+}
+.buttons_container{
+  position: relative;
+  bottom: -165px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.buttons_container .buttons{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 0 9px;
+  transition: all 0.11s ease-in-out;
+}
 
+.buttons_container .buttons svg{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  transform: translate(-50%,-50%);
+}
+.buttons:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+  .buttons:nth-child(1) svg{
+    top: 45%;
+    transform: translate(-40%,-50%);
+  }
 
+  .buttons:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.buttons:nth-child(3) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+  .buttons:nth-child(3) svg{
+    width: 20px;
+  }
+  .buttons:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+  }
+  .buttons:active {
+    transform: scale(0.9);
+  }
+ 
 
 
 .fullscreen-enabled .full_screen_button{
@@ -295,9 +417,16 @@ a {
   transform: scale(0.9);
   
 }
+.icons{
+  opacity:0.8;
+}
 .icons:hover, .links_left:hover{
-  transform: scale(0.9);
-  opacity:0.3;
+  transform: scale(1.1);
+  opacity:1;
+}
+.time_icon{
+  position: relative;
+  top: -1px;
 }
 
 .button_arrow {
@@ -428,6 +557,8 @@ footer .links li:first-child{
   animation: musicOn ease-in-out infinite;
   animation-duration: 1s
 }
+
+
 .links_right svg.off{
   animation:none
 }
@@ -439,6 +570,15 @@ footer .links li:first-child{
     transform: scale(1);
   }
 } 
+@keyframes background_ani {
+  from {
+    transform: rotate(0deg)
+  }
+   to{
+    transform: rotate(360deg)
+  }
+} 
+
 
 
 
@@ -486,4 +626,4 @@ footer .links li:first-child{
   top: 107px;
 }
   
-}
+  }
