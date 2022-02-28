@@ -625,7 +625,7 @@ top: 111px;
 }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 423px) {
   body{
     overflow: hidden;
   }
@@ -641,6 +641,7 @@ width: 100%;
 }
 .face_background {
 top: 124px;
+visibility: hidden;
 }
 #face_svg {
 max-width: 162px;
