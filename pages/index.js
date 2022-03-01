@@ -15,12 +15,9 @@ import {
   ClosefullScreen,
   TwitterIcon,
   time,
-  black_logo,
-  black_arrow,
   account
 } from "../img/index.js"
 // 
-import Intro_face from "../components/intro_face/index.js"
 import PageHead from "../components/PageHead/index.js"
 import Footer from "../components/footer/index.js"
 import Face from "../components/D_D_face/index.js"
@@ -110,7 +107,7 @@ export default function Home() {
  
   return (
     <div id="body" className={styles.container} >
-        {/* <Intro_face /> */}
+  
       <PageHead />
       <FullScreen handle={screenMood}>
       <main className={styles.main} >
