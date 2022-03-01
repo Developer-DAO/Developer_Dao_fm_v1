@@ -720,9 +720,7 @@ transform: translate(-48%, -39px);
   top: 114px;
 }
 
-  .time_icon{
-    display: none;
-  }
+
   .button_container{
     width: 63px;
     margin: 0 auto;
@@ -763,9 +761,7 @@ transform: translate(-48%, -39px);
   max-width: 235px;
   top: 114px;
 }
-  .time_icon{
-    display: none;
-  }
+
   .button_container{
     width: 63px;
     margin: 0 auto;
@@ -785,5 +781,10 @@ transform: translate(-48%, -39px);
 @media screen and (max-width: 572px) {
   .face_background{
     animation: none;
+  }
+}
+@media screen and (max-width: 380px) {
+  .time_icon{
+    display: none;
   }
 }
