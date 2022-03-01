@@ -105,7 +105,9 @@ export default function Home() {
           <div className="full_screen_button icons" onClick={screenMood.enter} title="Full Screen">
                   <Image src={OpenfullScreen}alt="full Screen Icon"/>
              </div>
-
+             <div className="close_full_screen_button icons" onClick={screenMood.exit} title="Exit Full Screen">
+                  <Image src={ClosefullScreen}alt="full Screen Icon"/>
+             </div>
              <div className="icons" title="tweet">
               <a href="https://twitter.com/intent/tweet?text=Chilling with 🎧 Lofi Music on Developer DAO FM https://developerdaofm.com/" rel="noreferrer" target="_blank">
                   <Image src={TwitterIcon} alt="twitter Icon"/>
@@ -119,9 +121,7 @@ export default function Home() {
              <div className="icons infoIcon" title="Info" onClick={ () => showInfo()}>
                 <Image src={InfoIcon}alt="info Icon"/>
             </div>
-         <div className="close_full_screen_button icons" onClick={screenMood.exit} title="Exit Full Screen">
-                  <Image src={ClosefullScreen}alt="full Screen Icon"/>
-             </div>
+            
           
           </div>
           </div>
