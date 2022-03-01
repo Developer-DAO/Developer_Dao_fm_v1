@@ -3,7 +3,6 @@ import React, { useEffect, useState , useRef} from "react";
 import Image from 'next/image'
 import BackgroundImg  from "../../img/dddddddddddd.png"
 
-
 import useSound from 'use-sound';
 
 
@@ -69,7 +68,7 @@ export default function Timer({timer}) {
  const sec = padTime(timeLeft - min * 60);
 
     return (
-      <span className={timer ? " hide menu time_menu" :"show menu time_menu" }>
+      <span className={timer ? "show menu time_menu" :"  hide menu time_menu " }>
       <Image className="background_img" src={BackgroundImg} alt="Background Img" />
       <div className="inner_menu">
         <div className="time_circle" onClick={() => playSound()}>

@@ -10,6 +10,7 @@ import Links from "../img/icons/links.svg"
 import time from "../img/icons/time.svg"
 import black_logo from "../img/black_logo.png"
 import black_arrow from "../img/black_arrow.png"
+import account from "../img/icons/user.png"
 export {
     Background,
     PlayIcon,
@@ -21,5 +22,6 @@ export {
     Links,
     time,
     black_logo,
-    black_arrow
+    black_arrow,
+    account
   };

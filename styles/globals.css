@@ -13,6 +13,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+#body{
+  height: 100vh;
+}
 * {
   box-sizing: border-box;
 }
@@ -117,6 +120,19 @@ li{
   cursor: pointer;
 }
 
+.userIcon::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 13px;
+  background-color: #fff;
+  right: 42px;
+  top: 6px;
+}
+.headIcons .userIcon{
+  position: relative;
+  margin-left: 39px;
+}
 a {
   color: #fff;
   color: inherit;
@@ -129,9 +145,10 @@ a {
   font-family: RobotoMono;
   position: absolute;
   top: 60px;
+  height: 0;
   border-radius:9px;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+  transition: all 0.3s cubic-bezier(0.93, 0.88, 0.1, 0.8);
 }
 .menu:hover{
   cursor: auto;
@@ -139,18 +156,56 @@ a {
 .info_menu{
   opacity: 0;
   width: 223px;
-  height: 214px;
   right: 17px;
+ 
 }
 .time_menu{
   opacity: 0;
   width: 243px;
-  height: 276px;
   right: 52px;
 }
-.hide{
+.buttons_container{
+  visibility: hidden;
   opacity: 0;
-  visibility :hidden;
+  bottom: -218px;
+  transition: all 0.3s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.show.time_menu .buttons_container{
+  visibility: visible;
+  opacity: 1;
+  bottom:-165px;
+  transition: all 0.9s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.buttons_container{
+  visibility: hidden;
+  opacity: 0;
+  bottom: -218px;
+  transition: all 0.3s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.time_circle{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.show .time_circle{
+  visibility: visible;
+  opacity: 1;
+}
+.info_menu_text{
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+
+}
+.show  .info_menu_text{
+  visibility: visible;
+  opacity: 1;
+}
+.show.info_menu{
+  height: 255px;
+}
+.show.time_menu{
+  height: 276px;
 }
 .show{
   top: 74px;
@@ -201,7 +256,7 @@ a {
 .info_menu_links_holder .info_menu_links:nth-child(2){
   float: right;
 }
-.info_menu_text .info_menu_links_holder:nth-child(3){
+.info_menu_text .info_menu_links_holder:nth-child(4){
   border-bottom:none
 }
 .time_circle .cirle{
@@ -309,7 +364,9 @@ a {
     transform: scale(0.9);
   }
  
-
+.fullscreen{
+  height: 100vh;
+}
 
 .fullscreen-enabled .full_screen_button{
   display: none;
@@ -624,7 +681,7 @@ footer .links li:first-child{
   padding: 0 1rem !important;
 } 
 .logo {
-width: 113px;
+  width: 156px;
 }
 .anmation {
 width: 100%;
@@ -668,7 +725,7 @@ transform: translate(-48%, -39px);
   padding: 0 1rem !important;
 } 
 .logo {
-width: 113px;
+  width: 156px;
 }
 .anmation {
 width: 100%;
@@ -699,4 +756,14 @@ transform: translate(-48%, -39px);
    
     padding: 0 9px;
 }
+}
+@media screen and (max-width: 320px) {
+  .logo {
+    width: 129px;
+  }
+}
+@media screen and (max-width: 572px) {
+  .face_background{
+    animation: none;
+  }
 }

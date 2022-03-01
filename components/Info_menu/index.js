@@ -6,12 +6,12 @@ import {
     black_arrow
   } from "../../img/index.js"
 
-export default function Info_menu({info}) {
+export default function Info_menu({info,timer}) {
 
-
+  
     return (
      
-        <span className={info ? "hide menu info_menu" :"show menu info_menu" }>
+        <span className={info ? "show menu info_menu" :"hide menu info_menu" }>
         <Image className="background_img" src={BackgroundImg} alt="Background Img" />
         <div className="inner_menu">
         <div className="info_menu_logo">
@@ -34,7 +34,7 @@ export default function Info_menu({info}) {
                 <Image src={black_arrow} alt="black arrow Icon"/>
                 </span>
               </a>
-            </li>
+            </li> 
             <li className="info_menu_links_holder">
               <a href="https://twitter.com/developer_dao" rel="noreferrer" target="_blank">
                 <span className="info_menu_links">Twitter</span>
@@ -43,6 +43,15 @@ export default function Info_menu({info}) {
                 </span>
               </a>
             </li>
+            <li className="info_menu_links_holder">
+              <a href="https://twitter.com/sadiq_moo" rel="noreferrer" target="_blank">
+                <span className="info_menu_links">Credit</span>
+                <span className="info_menu_links">
+                <Image src={black_arrow} alt="black arrow Icon"/>
+                </span>
+              </a>
+            </li>
+          
           </ul>
         </div>
         </div>

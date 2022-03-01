@@ -15,7 +15,8 @@ import {
   TwitterIcon,
   time,
   black_logo,
-  black_arrow
+  black_arrow,
+  account
 } from "../img/index.js"
 // 
 
@@ -26,8 +27,8 @@ import Info_menu from "../components/Info_menu"
 import Timer from "../components/timer"
 export default function Home() {
   const screenMood = useFullScreenHandle();
-  const [info, setInfo] = useState("false");
-  const [timer, setTimerMode] = useState("false")
+  const [info, setInfo] = useState(false);
+  const [timer, setTimerMode] = useState(false)
   const [state, setTheState] = useState( {
     url: null,
     pip: false,
@@ -46,9 +47,26 @@ export default function Home() {
   
   const showInfo = () => {
     setInfo(!info)
+    clearTimer();
+   
   }
   const showTimer = () => {
-    setTimerMode(!timer)
+    setTimerMode(!timer);
+   clearInfo();
+  }
+  const clearTimer = () =>{
+    if(timer === true){
+      setTimerMode(false)
+    }
+  }
+  const clearInfo = () =>{
+    if(info === true){
+      setInfo(false)
+    }
+  }
+  const closeMenu = () =>{
+    setInfo(false);
+    setTimerMode(false)
   }
   const boxRef = useRef();
   
@@ -87,12 +105,13 @@ export default function Home() {
       </div>
     )
   }
+ 
   return (
-    <div className={styles.container}>
+    <div id="body" className={styles.container} >
       <PageHead />
       <FullScreen handle={screenMood}>
       
-      <main className={styles.main}>
+      <main className={styles.main} >
       <header>
        <div className="container">
          <div className="header_container">
@@ -113,15 +132,19 @@ export default function Home() {
                   <Image src={TwitterIcon} alt="twitter Icon"/>
               </a>
              </div>
-             <Timer timer={timer}/>
+             <Timer timer={timer} />
              <div className="icons time_icon" title="time Icon"  onClick={ () => showTimer()}>
                   <Image src={time} alt="time Icon"/>
              </div>
-             <Info_menu info={info}/>
+             <Info_menu info={info} />
              <div className="icons infoIcon" title="Info" onClick={ () => showInfo()}>
                 <Image src={InfoIcon}alt="info Icon"/>
             </div>
-            
+
+            {/* <div className="icons userIcon" title="Info" onClick={ () => showInfo()}>
+                <Image src={account}alt="user Icon"/>
+            </div>
+             */}
           
           </div>
           </div>
