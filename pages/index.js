@@ -1,6 +1,7 @@
 
 import {React, useState, useRef} from "react"
 import Image from 'next/image'
+
 import ReactPlayer from 'react-player/youtube'
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 // css
@@ -19,12 +20,13 @@ import {
   account
 } from "../img/index.js"
 // 
-
+import Intro_face from "../components/intro_face/index.js"
 import PageHead from "../components/PageHead/index.js"
 import Footer from "../components/footer/index.js"
 import Face from "../components/D_D_face/index.js"
 import Info_menu from "../components/Info_menu"
 import Timer from "../components/timer"
+
 export default function Home() {
   const screenMood = useFullScreenHandle();
   const [info, setInfo] = useState(false);
@@ -108,9 +110,9 @@ export default function Home() {
  
   return (
     <div id="body" className={styles.container} >
+        <Intro_face />
       <PageHead />
       <FullScreen handle={screenMood}>
-      
       <main className={styles.main} >
       <header>
        <div className="container">
