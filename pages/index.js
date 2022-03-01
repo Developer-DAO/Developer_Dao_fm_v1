@@ -110,7 +110,7 @@ export default function Home() {
  
   return (
     <div id="body" className={styles.container} >
-        <Intro_face />
+        {/* <Intro_face /> */}
       <PageHead />
       <FullScreen handle={screenMood}>
       <main className={styles.main} >
