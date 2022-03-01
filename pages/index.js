@@ -95,34 +95,35 @@ export default function Home() {
       <main className={styles.main}>
       <header>
        <div className="container">
+         <div className="header_container">
           <div className="logo">
             <Image src="/Group50.svg" alt="Vercel Logo" layout='fill' />
             <span className="fm_live"></span>
           </div>
           <div className="headIcons">
-           <ul>
-           <li className="icons infoIcon" title="Info" onClick={ () => showInfo()}>
-                <Image src={InfoIcon}alt="info Icon"/>
-            </li>
-            <Info_menu info={info}/>
-            <li className="icons time_icon" title="time Icon"  onClick={ () => showTimer()}>
-                  <Image src={time} alt="time Icon"/>
-             </li>
-             <Timer timer={timer}/>
-             <li className="icons" title="tweet">
+
+          <div className="full_screen_button icons" onClick={screenMood.enter} title="Full Screen">
+                  <Image src={OpenfullScreen}alt="full Screen Icon"/>
+             </div>
+
+             <div className="icons" title="tweet">
               <a href="https://twitter.com/intent/tweet?text=Chilling with 🎧 Lofi Music on Developer DAO FM https://developerdaofm.com/" rel="noreferrer" target="_blank">
                   <Image src={TwitterIcon} alt="twitter Icon"/>
               </a>
-             </li>
-            
-             <li className="full_screen_button icons" onClick={screenMood.enter} title="Full Screen">
-                  <Image src={OpenfullScreen}alt="full Screen Icon"/>
-             </li>
-             <li className="close_full_screen_button icons" onClick={screenMood.exit} title="Exit Full Screen">
+             </div>
+             <Timer timer={timer}/>
+             <div className="icons time_icon" title="time Icon"  onClick={ () => showTimer()}>
+                  <Image src={time} alt="time Icon"/>
+             </div>
+             <Info_menu info={info}/>
+             <div className="icons infoIcon" title="Info" onClick={ () => showInfo()}>
+                <Image src={InfoIcon}alt="info Icon"/>
+            </div>
+         <div className="close_full_screen_button icons" onClick={screenMood.exit} title="Exit Full Screen">
                   <Image src={ClosefullScreen}alt="full Screen Icon"/>
-             </li>
-             
-           </ul>
+             </div>
+          
+          </div>
           </div>
         </div>
       </header>
