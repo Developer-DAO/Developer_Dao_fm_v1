@@ -21,8 +21,8 @@ import {
 import PageHead from "../components/PageHead/index.js"
 import Footer from "../components/footer/index.js"
 import Face from "../components/D_D_face/index.js"
-import Info_menu from "../components/Info_menu"
-import Timer from "../components/timer"
+import Info_menu from "../components/Info_menu/index.js"
+import Timer from "../components/timer/index.js"
 
 export default function Home() {
   const screenMood = useFullScreenHandle();
