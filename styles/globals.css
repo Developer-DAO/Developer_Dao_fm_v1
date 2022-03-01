@@ -616,7 +616,7 @@ footer .links li:first-child{
   
 
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 428px) {
   body{
     overflow: hidden;
   }
@@ -624,20 +624,39 @@ footer .links li:first-child{
   padding: 0 1rem !important;
 } 
 .logo {
-width: 136px;
+width: 113px;
 }
 .anmation {
 width: 100%;
-
+overflow: hidden;
 }
 .face_background {
-top: 111px;
-  animation:none
-
+top: 124px;
+width: 437px;
+position: relative;
+left: 50%;
+transform: translate(-48%, -39px);
 }
 #face_svg {
-  max-width: 189px;
-  top: 98px;
+  max-width: 235px;
+  top: 114px;
+}
+
+  .time_icon{
+    display: none;
+  }
+  .button_container{
+    width: 63px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-bottom: 29px;
+  }
+  footer {
+   
+    padding: 0 9px;
+}
+.face_background{
+  animation: none;
 }
 }
 
@@ -666,9 +685,7 @@ transform: translate(-48%, -39px);
   max-width: 235px;
   top: 114px;
 }
-.face_background{
 
-}
   .time_icon{
     display: none;
   }
