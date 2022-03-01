@@ -19,39 +19,46 @@ export default function Info_menu({info,timer}) {
         </div>
         <div className="info_menu_text">
           <ul>
+          <a href="https://www.developerdao.com/" rel="noreferrer" target="_blank">
             <li className="info_menu_links_holder">
-              <a href="https://www.developerdao.com/" rel="noreferrer" target="_blank">
+           
                 <span className="info_menu_links">Website</span>
                 <span className="info_menu_links">
                   <Image src={black_arrow} alt="black arrow Icon"/>
                 </span>
+                </li>
               </a>
-            </li>
-            <li className="info_menu_links_holder">
+        
+          
               <a href="https://developerdao.notion.site/developerdao/Developer-DAO-Wiki-eff4dcb00bef46fbaa93e9e4cf940e2e" rel="noreferrer" target="_blank">
+              <li className="info_menu_links_holder">
                 <span className="info_menu_links">Wiki</span>
                 <span className="info_menu_links">
                 <Image src={black_arrow} alt="black arrow Icon"/>
                 </span>
-              </a>
+           
             </li> 
+            </a>
+            <a href="https://twitter.com/developer_dao" rel="noreferrer" target="_blank">
             <li className="info_menu_links_holder">
-              <a href="https://twitter.com/developer_dao" rel="noreferrer" target="_blank">
+           
                 <span className="info_menu_links">Twitter</span>
                 <span className="info_menu_links">
                 <Image src={black_arrow} alt="black arrow Icon"/>
                 </span>
-              </a>
+           
             </li>
-            <li className="info_menu_links_holder">
+            </a>
+        
               <a href="https://twitter.com/sadiq_moo" rel="noreferrer" target="_blank">
+              <li className="info_menu_links_holder">
                 <span className="info_menu_links">Credit</span>
                 <span className="info_menu_links">
                 <Image src={black_arrow} alt="black arrow Icon"/>
                 </span>
-              </a>
+           
             </li>
-          
+            </a>
           </ul>
         </div>
         </div>
