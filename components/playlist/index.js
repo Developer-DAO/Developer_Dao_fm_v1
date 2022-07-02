@@ -28,9 +28,9 @@ export default function Playlist({info,playListMode,channelProp, setChannel}) {
         </div>
         <div className="info_menu_text playlist_inner">
           <ul>
-          {playlists.map( i => {
+          {playlists.map( (i,r) => {
           return (
-            <li className="playlists" onClick={ () => channelPlaylist(i.link)}>
+            <li key={r} className="playlists" onClick={ () => channelPlaylist(i.link)}>
                 <div className="left_sec">
                   <div className="iamges_playlist">
                     <div className="overlay">
