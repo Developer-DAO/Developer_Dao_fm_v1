@@ -28,6 +28,7 @@ export default function Home() {
   const screenMood = useFullScreenHandle();
   const [info, setInfo] = useState(false);
   const [timer, setTimerMode] = useState(false)
+  const [channel, setChannel] = useState("https://youtu.be/5qap5aO4i9A")
   const [state, setTheState] = useState( {
     url: null,
     pip: false,
@@ -85,7 +86,7 @@ export default function Home() {
         <span className="button_span"></span>
         <span className="button_span"></span>    
         <div className="icon_mode">
-          <Image src={PlayIcon}alt="Picture of the author"/>
+          <Image src={PlayIcon} alt="Picture of the author"/>
         </div>
       </div>
     )
@@ -107,7 +108,6 @@ export default function Home() {
  
   return (
     <div id="body" className={styles.container} >
-  
       <PageHead />
       <FullScreen handle={screenMood}>
       <main className={styles.main} >
@@ -154,7 +154,7 @@ export default function Home() {
             </div>
             <Face isTheMuic_playing_or_not={state.playing} anim_el={boxRef}/>
             <ReactPlayer 
-             url='https://youtu.be/5qap5aO4i9A'
+             url={channel}
              width="0"
              height="0"
              playing={state.playing}
@@ -167,7 +167,7 @@ export default function Home() {
             {state.playing ? pause() : play()}
           </div>
         </div>
-        <Footer musicState={state.playing}/>
+        <Footer musicState={state.playing} showInfo={showInfo} infoProp={info} channelProp={channel} setChannel={setChannel}/>
       </main>
    
       </FullScreen>

@@ -1,17 +1,27 @@
 import Image from 'next/image'
-
+import musicIcon from "../../img/icons/music.svg"
+import Playlist from "../playlist"
+import {useState} from "react"
 import {
  Links
 } from "../../img/index.js"
-const Footer = ({musicState}) =>{
+const Footer = ({musicState, channelProp, setChannel}) =>{
+
+  const [playlist, setPlaylist] = useState(false);
+
+  const showPlaylist = () => {
+    setPlaylist(!playlist)
+    
+  }
     return(
         <footer className="footer">
           <div className="container">
             <div className="flex-container">
           <div className="links_left flex-item">
             <div className="links_icon" title="Developer DAO website">
-              <a rel="noreferrer" target="_blank" href="https://www.developerdao.com/">
-              <Image src={Links} alt="Links Icon"/>
+              <a>
+              <Image src={musicIcon} alt="Links Icon" title="Info" onClick={ () => showPlaylist()}/>
+              <Playlist playListMode={playlist} channelProp={channelProp} setChannel={setChannel}/>
               </a>
             </div>
           </div>
