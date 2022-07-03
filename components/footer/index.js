@@ -18,7 +18,7 @@ const Footer = ({musicState, channelProp, setChannel}) =>{
           <div className="container">
             <div className="flex-container">
           <div className="links_left flex-item">
-            <div className="links_icon" title="Developer DAO website">
+            <div className="links_icon" title="Playlists">
               <a>
               <Image src={musicIcon} alt="Links Icon" title="Info" onClick={ () => showPlaylist()}/>
               <Playlist playListMode={playlist} channelProp={channelProp} setChannel={setChannel}/>
