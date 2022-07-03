@@ -961,10 +961,17 @@ transform: translate(-48%, -39px);
    padding-left: inherit
 }
 }
-
 @media screen and (max-width: 429px) {
   
   .menu_playlist{
     width: 76%;
   }
+  .playlists .right_sec h5 {
+    font-size: 0.8rem;
+}
+.left_sec .iamges_playlist {
+
+  height: 126px;
+ 
+}
 }
