@@ -62,14 +62,15 @@ export default function Playlist({info,playListMode,channelProp, setChannel}) {
 
 const playlists = [
   {
-    img:img7,
-    title:"Drake but he's extra chill for an hour | Lofi Mix | CHILLAF",
-    name:"CHILLAF ",
-    link:"https://youtu.be/oXQmLDFTNRc"
-  }, 
+    img:img2,
+    title:"Lofi hip hop radio chill beats to relax/study to..",
+    name:"Chill with Taiki",
+    link:"https://www.youtube.com/watch?v=HDhR2Yhnvfo"
+  },
+  
   {
     img:img5,
-    title:"The Weeknd but he's chill af for an hour Lofi Mix CHILLAF",
+    title:"The Weeknd but he's chill af for an hour..",
     name:"CHILLAF ",
     link:"https://youtu.be/wA0C0uRxSaE"
   },
@@ -80,10 +81,10 @@ const playlists = [
     link:"https://www.youtube.com/watch?v=-5KAN9_CzSA"
   },
   {
-    img:img2,
-    title:"Lofi hip hop radio chill beats to relax/study to..",
-    name:"Chill with Taiki",
-    link:"https://www.youtube.com/watch?v=HDhR2Yhnvfo"
+    img:img7,
+    title:"Drake but he's extra chill for an hour | Lofi Mix | CHILLAF",
+    name:"CHILLAF ",
+    link:"https://youtu.be/oXQmLDFTNRc"
   },
   {
     img:img3,
@@ -105,6 +106,4 @@ const playlists = [
     link:"https://youtu.be/q0BVR5jRXxE"
     
   }
-  
-  
 ]
