@@ -19,6 +19,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+#ph{
+  position: absolute;
+  z-index: 10000;
+}
 #body{
   height: 100vh;
 }
@@ -974,6 +978,7 @@ transform: translate(-48%, -39px);
   height: 126px;
  
 }
+
 .playlists {
   display: block;
 }

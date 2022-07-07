@@ -23,6 +23,8 @@ import Footer from "../components/footer/index.js"
 import Face from "../components/D_D_face/index.js"
 import Info_menu from "../components/Info_menu/index.js"
 import Timer from "../components/timer/index.js"
+import ProductHunt from "../components/ProductHunt/index.js"
+
 
 export default function Home() {
   const screenMood = useFullScreenHandle();
@@ -168,7 +170,7 @@ export default function Home() {
           </div>
         </div>
         <Footer musicState={state.playing} showInfo={showInfo} infoProp={info} channelProp={channel} setChannel={setChannel}/>
-      
+        <ProductHunt />
       
       </main>
    
