@@ -84,7 +84,7 @@ const playlists = [
     img:img7,
     title:"Drake but he's extra chill for an hour | Lofi Mix | CHILLAF",
     name:"CHILLAF ",
-    link:"https://youtu.be/oXQmLDFTNRc"
+    link:"https://youtu.be/AG4qxGwTLlY"
   },
   {
     img:img3,
