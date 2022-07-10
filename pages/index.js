@@ -30,7 +30,7 @@ export default function Home() {
   const screenMood = useFullScreenHandle();
   const [info, setInfo] = useState(false);
   const [timer, setTimerMode] = useState(false)
-  const [channel, setChannel] = useState("https://youtu.be/5qap5aO4i9A")
+  const [channel, setChannel] = useState("https://youtu.be/wA0C0uRxSaE")
   const [state, setTheState] = useState( {
     url: null,
     pip: false,
